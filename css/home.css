@@ -1,0 +1,220 @@
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    /* Gradient in Hex */
+    background: linear-gradient(45deg, #FAA601 0%, 12.265978008508682%, #EB54A8 24.531956017017365%, 32.92446719826692%, #63BBF4 48.7411230802536%, 63.589413294420005%, #5A00EC 70.30342221260071%, 85.15171110630035%, #9D01F0 100%);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    transform-origin: center center;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 2.5em;
+    background-color: rgba(0,0,0,.5);
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 2.5em;
+    background-image: url("https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/marks/Marchio orange.svg");
+    background-size: 1.9em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform .3s ease-in-out;
+}
+
+.logo::after {
+    content: "ELEMENTO";
+    margin-left: calc(50vw + 1.3rem);
+    color: #FAA601;
+    font-family: 'herobold', Arial, Helvetica, sans-serif;
+    line-height: 2.5em;
+    opacity: 0;
+    transition: opacity .3s ease-in-out .1s;
+}
+
+.topbar:hover .logo::after{
+    opacity: 1;
+}
+
+.topbar:hover .logo{
+    transform: translateX(-3.3rem);
+}
+
+.thebox {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    z-index: 100;
+    padding: 2rem;
+    margin: 0;
+    max-width: calc(100vw - 8rem);
+    height: fit-content;
+    max-height: calc(100vh - 5rem);
+    transform: translate3d(-50%, -50%, 0);
+    background-color: rgba(255, 255, 255,.7);
+    border-radius: .5rem;
+    font-family: 'Google Sans', sans-serif;
+}
+
+.thebox * {
+    white-space: pre-line
+}
+
+.thebox table img {
+    height: 4vh;
+}
+
+@media (orientation: landscape) {
+    .thebox {
+        width: calc(50vw - 4rem);
+    }
+    .thebox h1 {
+        font-size: 3vh;
+    }
+    
+    .thebox h2 {
+        font-size: 2.5vh;
+    }
+    
+    .thebox h3 {
+        font-size: 1.7vh;
+    }
+
+    .thebox p {
+        font-size: 1.7vh;
+    }
+    .thebox table img {
+        height: 4vh;
+    }
+}
+
+@media (orientation: portrait) {
+    .thebox {
+        width: calc(100vw - 8rem);
+        max-height: calc(100vh - 10rem);
+    }
+    .thebox h1 {
+        font-size: 6vmin;
+    }
+    
+    .thebox h2 {
+        font-size: 4vmin;
+    }
+    
+    .thebox h3 {
+        font-size: 3vmin;
+    }
+
+    .thebox p {
+        font-size: 3vmin;
+    }
+    .thebox table img {
+        height: 6vmin;
+    }
+}
+
+@media (max-width: 600px) {
+    .thebox {
+        width: calc(100vw - 8rem);
+        max-height: calc(100vh - 10rem);
+    }
+    .thebox h1 {
+        font-size: 4vmin;
+    }
+    
+    .thebox h2 {
+        font-size: 2.5vmin;
+    }
+    
+    .thebox h3 {
+        font-size: 2vmin;
+    }
+
+    .thebox p {
+        font-size: 2vmin;
+    }
+    .thebox table img {
+        height: 6vmin;
+    }
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .thebox {
+        width: calc(100vw - 8rem);
+        max-height: calc(100vh - 10rem);
+    }
+    .thebox h1 {
+        font-size: 4vmin;
+    }
+    
+    .thebox h2 {
+        font-size: 2.5vmin;
+    }
+    
+    .thebox h3 {
+        font-size: 2vmin;
+    }
+
+    .thebox p {
+        font-size: 2vmin;
+    }
+    .thebox table img {
+        height: 6vmin;
+    }
+}
+
+.thebox h1, .thebox h2 {
+    text-align: center;
+}
+
+.thebox table {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}

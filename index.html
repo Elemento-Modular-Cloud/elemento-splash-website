@@ -31,6 +31,11 @@
         <link rel="preload" href="./css/subform.scss" as="style">
         <link rel="preload" href="./css/page.scss" as="style"> -->
 
+        <link rel=“preconnect” href="fonts.googleapis.com"/>
+        <link rel="stylesheet" type="text/css" href="./css/fonts.css"/>
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
+
         <title>ELEMENTO</title>
         <link defer rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
         <link defer rel="apple-touch-icon" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
@@ -40,7 +45,8 @@
         <meta name="author" content="Elemento Srl">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link defer rel="stylesheet" type="text/css" href="./css/home.scss"/>
+        <link defer rel="stylesheet" type="text/css" href="./css/home.css"/>
+        <link defer rel="stylesheet" type="text/css" href="./css/squares.scss"/>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
@@ -59,35 +65,47 @@
                 <!-- <img src="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/marks/Marchio orange.svg"> -->
             </div>
         </div>
-        <div class="thebox">
+        <div class="thebox centered">
             <h1>Welcome internaut!</h1>
-            <h2>This is the home of ELEMENTO</h2>
+            <h2 class="centered">
+                ELEMENTO is the revolution of
+                Ready. Set. Cloud.
+            </h2>
             <h3>
-                ELEMENTO is the revolution of "Ready. Set. Cloud.".<br/>
                 Our technologies make the Cloud a thing anyone can exploit, without changing habits or learning new code and without being tied to a single Cloud Provider.
             </h3>
             <p>
-                Thanks to our latest progess, our website is undergoing a HUGE review and upgrade process!
+                Thanks to our latest progess, our website needed for a HUGE review and upgrade process!
             </p>
             <p>
-                In a few weeks we'll bring up the new one with a lot of new products, information, technical papers and documentation.
+                In a few weeks we'll bring up the new site with a lot of information, products, technical papers and documentation.
             </p>
             <p>
                 In the meantime you can follow us on our social accounts:
             </p>
             <table>
                 <tr>
-                    <td>Linkedin</td>
-                    <td>Twitter</td>
-                    <td>Instagram</td>
+                    <td><a href=""><img src="./img/social/linkedin.svg"></a></td>
+                    <td><a href=""><img src="./img/social/twitter.svg"></a></td>
+                    <td><a href=""><img src="./img/social/instagram.svg"></a></td>
                 </tr>
             </table>
             <p>
-                And subscribe to our newsletter to never miss a news!
+                And subscribe to our newsletter to never miss any news!
             </p>
         </div>
         <!-- <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
             <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
         </video> -->
     </body>
+    <div class="squares">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
 </html>
