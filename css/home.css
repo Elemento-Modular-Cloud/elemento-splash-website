@@ -19,7 +19,7 @@ body::before {
     height: 100vh;
     width: 100vw;
     /* Gradient in Hex */
-    background: linear-gradient(45deg, #FAA601 0%, 12.265978008508682%, #EB54A8 24.531956017017365%, 32.92446719826692%, #63BBF4 48.7411230802536%, 63.589413294420005%, #5A00EC 70.30342221260071%, 85.15171110630035%, #9D01F0 100%);
+    background: linear-gradient(45deg, #C258FF 0%, 12.265978008508682%, #FFB187 24.531956017017365%, 32.92446719826692%, #FAA601 48.7411230802536%, 63.589413294420005%, #FF8982 70.30342221260071%, 85.15171110630035%, #9D01F0 100%);
     background-size: 400% 400%;
     animation: gradient 25s ease infinite;
     transform-origin: center center;
