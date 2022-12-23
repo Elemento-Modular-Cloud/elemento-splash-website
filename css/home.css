@@ -235,3 +235,8 @@ body::before {
 .centered {
     text-align: center;
 }
+
+.lang-disable {
+    display: none;
+    visibility: hidden;
+}
