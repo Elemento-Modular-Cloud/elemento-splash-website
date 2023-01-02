@@ -7,36 +7,24 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    background-color: black;
 }
 
-body::before {
-    content: '';
+.videobg {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    /* Gradient in Hex */
-    background: linear-gradient(45deg, #C258FF 0%, 12.265978008508682%, #FFB187 24.531956017017365%, 32.92446719826692%, #FAA601 48.7411230802536%, 63.589413294420005%, #FF8982 70.30342221260071%, 85.15171110630035%, #9D01F0 100%);
-    background-size: 400% 400%;
-    animation: gradient 25s ease infinite;
-    transform-origin: center center;
-
+    left: 50%; /* % of surrounding element */
+    top: 50%;
+    transform: translate(-50%, -50%); /* % of current element */
+    z-index: 90;
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    background-image: url("../img/videos/poster.png");
+    background-size: cover;
+    opacity: .7;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 .topbar {
     position: absolute;
     top: 0;
@@ -45,9 +33,9 @@ body::before {
     margin: 0;
     width: 100vw;
     height: 2.5em;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(14,17,25,.5);
     z-index: 100;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 10px rgba(14,17,25,0.6);
 }
 
 .mark {
@@ -94,10 +82,12 @@ body::before {
     height: fit-content;
     max-height: calc(100vh - 5rem);
     transform: translate3d(-50%, -50%, 0);
-    background-color: rgba(255, 255, 255,.85);
+    /* background-color: rgba(255, 255, 255,.85); */
+    background: linear-gradient(rgba(0, 0, 0, .4) 25vmin, rgba(255, 255, 255,.85) 25vmin, rgba(255, 255, 255,.85) 100%);
     border-radius: .5rem;
     font-family: 'Google Sans', sans-serif;
-    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+    filter: drop-shadow(10px 10px 10px rgba(14,17,25,0.2));
+    padding-top: 25vmin;
 }
 
 .thebox * {
@@ -114,7 +104,12 @@ body::before {
 }
 
 .thebox .logo {
+    position: absolute;
+    top: 12.5vmin;
+    left: 0;
     height: 17vmin;
+    width: 100%;
+    transform: translateY(-50%);
     /* filter: brightness(0); */
 }
 
