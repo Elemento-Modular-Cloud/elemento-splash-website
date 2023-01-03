@@ -10,6 +10,45 @@ body {
     background-color: black;
 }
 
+.pagebg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0D1D2D;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: .8;
+}
+
+.noblur {
+    filter: blur(0);
+}
+
+.lesserblur  {
+    filter: blur(20px);
+}
+
+.lessblur  {
+    filter: blur(40px);
+}
+
+.blur {
+    filter: blur(70px);
+}
+
 .videobg {
     position: absolute;
     left: 50%; /* % of surrounding element */
@@ -22,8 +61,8 @@ body {
     min-height: 56.25vw; /* 100 * 9 / 16 */
     background-image: url("../img/videos/poster.png");
     background-size: cover;
-    opacity: .7;
-    overflow: hidden;
+    /* opacity: .7; */
+    /* overflow: hidden; */
 }
 
 .topbar {
@@ -34,7 +73,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 2.5em;
-    background-color: rgba(14,17,25,.5);
+    background-color: rgba(14,17,25,.8);
     z-index: 100;
     box-shadow: 0px 0px 10px rgba(14,17,25,0.6);
 }
@@ -84,10 +123,10 @@ body {
     max-height: calc(100vh - 5rem);
     transform: translate3d(-50%, -50%, 0);
     /* background-color: rgba(255, 255, 255,.85); */
-    background: linear-gradient(rgba(0, 0, 0, .4) 25vmin, rgba(255, 255, 255,.85) 25vmin, rgba(255, 255, 255,.85) 100%);
+    background: linear-gradient(rgba(14,17,25,.8) 25vmin, rgba(255, 255, 255,.85) 25vmin, rgba(255, 255, 255,.85) 100%);
     border-radius: .5rem;
     font-family: 'Google Sans', sans-serif;
-    filter: drop-shadow(10px 10px 10px rgba(14,17,25,0.2));
+    filter: drop-shadow(10px 10px 10px rgba(14,17,25,0.6));
     padding-top: 25vmin;
 }
 

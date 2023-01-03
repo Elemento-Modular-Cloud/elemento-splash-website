@@ -1,130 +1,152 @@
 <html>
-
-<head>
-    <!-- <link rel=“preconnect” href="fonts.googleapis.com"/>
-        <link rel=“preconnect” href="maps.googleapis.com"/>
-        <link rel=“preconnect” href="ajax.googleapis.com"/>
-        <link rel=“preconnect” href="geoip-js.com"/>
-
-        <link rel="stylesheet" type="text/css" href="./css/fonts.scss"/>
-        <link rel="stylesheet" type="text/css" href="./css/colors.scss"/>
-        <link rel="stylesheet" type="text/css" href="./css/variables.scss"/>
-
-        <link rel="preload" href="./img/logos/dark.svg" as="image">
-
-        <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli&display=swap" as="style">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
-        <link rel="preload" href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" as="style">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap">
+    <head>
+        <link rel=“preconnect” href="fonts.googleapis.com" />
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" as="style">
+        <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
-        <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font">
         
-        <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" as="script">
-        <link rel="preload" href="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js" as="script">
+        <link rel=“preconnect” href="raw.githubusercontent.com/Elemento-Modular-Cloud" />
+        <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico" as="image">
+        <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/logos/vertical/Logo%20vertical%20darkbg%20transp%20payoff.svg" as="image">
 
-        <link rel="preload" href="./img/schemas/grid.svg" as="image">
-        <link rel="preload" href="https://maps.gstatic.com/mapfiles/api-3/images/google_white5_hdpi.png" as="image">
+        <link rel="preload" href="./img/videos/poster.png" as="image">
 
-        <link rel="preload" href="./css/home.scss" as="style">
-        <link rel="preload" href="./css/menu.scss" as="style">
-        <link rel="preload" href="./css/waves.scss" as="style">
-        <link rel="preload" href="./css/subform.scss" as="style">
-        <link rel="preload" href="./css/page.scss" as="style"> -->
+        <title>ELEMENTO</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/polygonizr.js"></script>
+        <link defer rel="shortcut icon" type="image/x-icon"
+            href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
+        <link defer rel="apple-touch-icon"
+            href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
 
-    <link rel=“preconnect” href="fonts.googleapis.com" />
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" as="style">
-    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
-    
-    <link rel=“preconnect” href="raw.githubusercontent.com/Elemento-Modular-Cloud" />
-    <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico" as="image">
-    <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/logos/vertical/Logo%20vertical%20darkbg%20transp%20payoff.svg" as="image">
+        <meta name="description" content="Elemento">
+        <meta name="keywords" content="Elemento, Modular, Cloud, AtomOS, hypervisor, 4.0, Virtualization, Container">
+        <meta name="author" content="Elemento Srl">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" href="./img/videos/poster.png" as="image">
-    <link rel="preload" href="./img/videos/background-video.webm" as="video">
+        <link defer rel="stylesheet" type="text/css" href="./css/home.css" />
+        <link defer rel="stylesheet" type="text/css" href="./css/squares.scss" />
 
-    <title>ELEMENTO</title>
-    <link defer rel="shortcut icon" type="image/x-icon"
-        href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
-    <link defer rel="apple-touch-icon"
-        href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-    <meta name="description" content="Elemento">
-    <meta name="keywords" content="Elemento, Modular, Cloud, AtomOS, hypervisor, 4.0, Virtualization, Container">
-    <meta name="author" content="Elemento Srl">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            gtag('config', 'UA-153798322-1');
+        </script>
+    </head>
 
-    <link defer rel="stylesheet" type="text/css" href="./css/home.css" />
-    <link defer rel="stylesheet" type="text/css" href="./css/squares.scss" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-153798322-1');
-    </script>
-</head>
-
-<body>
-    <video autoplay muted loop class="videobg" poster="./img/videos/poster.png">
-        <source src="./img/videos/background-video.webm" type="video/webm">
-        <!-- <source src="./img/videos/background-video.mp4" type="video/mp4"> -->
-    </video>
-    <div class="topbar">
-        <div class="mark">
+    <body>
+        <div class="pagebg">
+            <div class="bg blur" id="blurred-background3"></div>
+            <div class="bg lesserblur" id="blurred-background2"></div>
+            <div class="bg lessblur" id="blurred-background"></div>
+            <div class="bg noblur" id="page-background"></div>
+            <!-- <video autoplay muted playsinline loop class="videobg"> -->
+                <!-- <source src="img/videos/background-video.webm" type="video/webm"> -->
+                <!-- <source src="img/videos/background-video.mp4" type="video/mp4"> -->
+                <!-- <source src="img/videos/background-video-compressed.webm" type="video/webm"> -->
+                <!-- <source src="//cdn-cf-east.streamable.com/mp4/3gf7n6.mp4?Expires=1673014920\u0026Signature=NEef6brUFEYLaptCuoxF~Rcf4G~miwygviv~0EjA0TktirglYNLH2ptiN1aT5XjRoTomPFWzVPlgIMYovVLZiGLkqfbAs6vtpRnhhtbzBDIQI3UxonLd25UAg3cyLfW2jCUoarRtnJVW3mqv2AqpEWnvQw6yIgxVm6AbBMGklZrFeG6K7DEpIzqeDO~DPmYPn2ZvOpbSkwukUIiGzOB4ctwTz9x0Bbql-myYiZzR2-O1ZaR-YcKC7T-ajNMz5ILDACTL87AutK9eqqIi15rwoa68B73imQgr8oq~DfmEk-6cxOVXcYL4A6vBmcL7VnCppgl77OFPrNCY9mjHwQKnzg__\u0026Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" type="video/mp4"> -->
+                <!-- <source src="https://drive.google.com/u/0/uc?id=1we66AbRHT1WHtmmhybemOXkoKuiRFs5L&export=download&confirm=t&uuid=c166892d-1d6e-4397-981e-8ed124fe1af1&at=ACjLJWmeeKqOP437jQ4kRXWXrZPn:1672755096799" type="video/mp4"> -->
+            <!-- </video> -->
         </div>
-    </div>
-    <div class="thebox centered">
-        <img class="logo"
-            src="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/logos/vertical/Logo%20vertical%20darkbg%20transp%20payoff.svg">
-        <h1 lang="en" class="centered">
-            Welcome to <span class="elemento">ELEMENTO</span>!
-        </h1>
-        <h3>
-            <span lang="en">Our technologies make the Cloud a thing anyone can exploit, without changing habits or
-                learning new code and without being tied to a single Cloud Provider.</span>
-            <span lang="it">Le nostre tecnologie rendono il Cloud semplice per chiunque da sfruttare, senza cambiare abitudini o
-            imparare nuovo codice e senza essere legati a un singolo Cloud Provider.</span>
-        </h3>
-        <p>
-            <span lang="en">Thanks to our latest progess, our website needed for a HUGE review and upgrade process!</span>
-            <span lang="it">Grazie ai nostri ultimi progressi, il nostro sito web ha avuto bisogno di un enorme processo di revisione e
-            aggiornamento!</span>
-        </p>
-        <p>
-            <span lang="en">In a few weeks we'll bring up the new site with a lot of information, products, technical papers and
-            documentation.</span>
-            <span lang="it">Tra qualche settimana verrà inaugurato il nuovo sito con molte informazioni, prodotti, documenti tecnici e
-            documentazione.</span>
-        </p>
-        <p>
-            <span lang="en">In the meantime you can follow us on our social accounts:</span>
-            <span lang="it">Nel frattempo potete seguirci sui nostri account social:</span>
-        </p>
-        <table>
-            <tr>
-                <td><a href="https://www.linkedin.com/company/68003985/admin/"><img src="./img/social/linkedin.svg"></a>
-                </td>
-                <td><a href="mailto:hello@elemento.cloud"><img src="./img/social/email.svg"></a></td>
-                <td><a href="https://www.instagram.com/elementocloud"><img src="./img/social/instagram.svg"></a></td>
-            </tr>
-        </table>
-    </div>
-    <script type="text/javascript" src="js/lang.js"></script>
-</body>
-<!-- <div class="squares">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-</div> -->
+        <div class="topbar">
+            <div class="mark">
+            </div>
+        </div>
+        <div class="thebox centered">
+            <img class="logo"
+                src="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/logos/vertical/Logo%20vertical%20darkbg%20transp%20payoff.svg">
+            <h1 lang="en" class="centered">
+                Welcome to <span class="elemento">ELEMENTO</span>!
+            </h1>
+            <h3>
+                <span lang="en">Our technologies make the Cloud a thing anyone can exploit, without changing habits or
+                    learning new code and without being tied to a single Cloud Provider.</span>
+                <span lang="it">Le nostre tecnologie rendono il Cloud semplice per chiunque da sfruttare, senza cambiare abitudini o
+                imparare nuovo codice e senza essere legati a un singolo Cloud Provider.</span>
+            </h3>
+            <p>
+                <span lang="en">Thanks to our latest progess, our website needed for a HUGE review and upgrade process!</span>
+                <span lang="it">Grazie ai nostri ultimi progressi, il nostro sito web ha avuto bisogno di un enorme processo di revisione e
+                aggiornamento!</span>
+            </p>
+            <p>
+                <span lang="en">In a few weeks we'll bring up the new site with a lot of information, products, technical papers and
+                documentation.</span>
+                <span lang="it">Tra qualche settimana verrà inaugurato il nuovo sito con molte informazioni, prodotti, documenti tecnici e
+                documentazione.</span>
+            </p>
+            <p>
+                <span lang="en">In the meantime you can follow us on our social accounts:</span>
+                <span lang="it">Nel frattempo potete seguirci sui nostri account social:</span>
+            </p>
+            <table>
+                <tr>
+                    <td><a href="https://www.linkedin.com/company/68003985/admin/"><img src="./img/social/linkedin.svg"></a>
+                    </td>
+                    <td><a href="mailto:hello@elemento.cloud"><img src="./img/social/email.svg"></a></td>
+                    <td><a href="https://www.instagram.com/elementocloud"><img src="./img/social/instagram.svg"></a></td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="js/lang.js"></script>
+        <script>
+            let $fg = $('#page-background');
+            let $blur1 = $('#blurred-background');
+            let $blur2 = $('#blurred-background2');
+            let $blur3 = $('#blurred-background3');
 
+            let w = innerWidth;
+            let h = innerHeight;
+            let a = w * h;
+            let points_scale = Math.sqrt(a / 3161360);
+
+            $fg.polygonizr({
+                restNodeMovements: 0,
+                nodeEase: "linear",
+                numberOfNodes: 100 * points_scale,
+                nodeDotColor: "250, 166, 1",
+                nodeLineColor: "250, 166, 1",
+                nodeFillColor: "250, 166, 1",
+                nodeGlowing: true,
+            }, true);
+
+            $blur1.polygonizr({
+                restNodeMovements: 0,
+                nodeEase: "linear",
+                numberOfNodes: 300 * points_scale,
+                nodeRelations: 10 * points_scale,
+                nodeDotColor: "91, 152, 206",
+                nodeLineColor: "91, 152, 206",
+                nodeFillColor: "91, 152, 206",
+                nodeGlowing: false,
+            }, true);
+            
+            $blur2.polygonizr({
+                restNodeMovements: 0,
+                nodeEase: "linear",
+                numberOfNodes: 150 * points_scale,
+                nodeRelations: 8 * points_scale,
+                nodeDotColor: "158, 0, 93",
+                nodeLineColor: "158, 0, 93",
+                nodeFillColor: "158, 0, 93",
+                nodeGlowing: false,
+            }, true);
+
+            $blur3.polygonizr({
+                restNodeMovements: 0,
+                nodeEase: "linear",
+                numberOfNodes: 80 * points_scale,
+                nodeRelations: 10 * points_scale,
+                nodeDotColor: "250, 166, 1",
+                nodeLineColor: "250, 166, 1",
+                nodeFillColor: "250, 166, 1",
+                nodeGlowing: false,
+            }, true);
+        </script>
+    </body>
 </html>
