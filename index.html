@@ -6,10 +6,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
         
         <link rel=“preconnect” href="raw.githubusercontent.com/Elemento-Modular-Cloud" />
-        <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/favicon/favicon.ico" as="image">
         <link rel="preload" href="https://raw.githubusercontent.com/Elemento-Modular-Cloud/graphic-assets/main/logos/vertical/Logo%20vertical%20darkbg%20transp%20payoff.svg" as="image">
 
-        <link rel="preload" href="./img/videos/poster.png" as="image">
 
         <title>ELEMENTO</title>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -95,58 +93,90 @@
         </div>
         <script type="text/javascript" src="js/lang.js"></script>
         <script>
-            let $fg = $('#page-background');
-            let $blur1 = $('#blurred-background');
-            let $blur2 = $('#blurred-background2');
-            let $blur3 = $('#blurred-background3');
+            let fg = $('#page-background');
+            let blur1 = $('#blurred-background');
+            let blur2 = $('#blurred-background2');
+            let blur3 = $('#blurred-background3');
 
-            let w = innerWidth;
-            let h = innerHeight;
+            var w = $(window).width();
+            var h = $(window).height();
             let a = w * h;
             let points_scale = Math.sqrt(a / 3161360);
 
-            $fg.polygonizr({
-                restNodeMovements: 0,
-                nodeEase: "linear",
-                numberOfNodes: 100 * points_scale,
-                nodeDotColor: "250, 166, 1",
-                nodeLineColor: "250, 166, 1",
-                nodeFillColor: "250, 166, 1",
-                nodeGlowing: true,
-            }, true);
+            var isMobile = false; //initiate as false
+            console.log(navigator.userAgent)
+            // device detection
+            if('ontouchstart' in document.documentElement) { 
+                isMobile = true;
+            }
 
-            $blur1.polygonizr({
-                restNodeMovements: 0,
-                nodeEase: "linear",
-                numberOfNodes: 300 * points_scale,
-                nodeRelations: 10 * points_scale,
-                nodeDotColor: "91, 152, 206",
-                nodeLineColor: "91, 152, 206",
-                nodeFillColor: "91, 152, 206",
-                nodeGlowing: false,
-            }, true);
-            
-            $blur2.polygonizr({
-                restNodeMovements: 0,
-                nodeEase: "linear",
-                numberOfNodes: 150 * points_scale,
-                nodeRelations: 8 * points_scale,
-                nodeDotColor: "158, 0, 93",
-                nodeLineColor: "158, 0, 93",
-                nodeFillColor: "158, 0, 93",
-                nodeGlowing: false,
-            }, true);
+            function create_polygons(width=w, height=h){
+                fg.polygonizr({
+                    restNodeMovements: 0,
+                    duration: 10,
+                    animationFps: 120,
+                    canvasWidth: width,
+                    canvasHeight: height,
+                    nodeEase: "linear",
+                    numberOfNodes: 100 * points_scale,
+                    nodeDotColor: "250, 166, 1",
+                    nodeLineColor: "250, 208, 126",
+                    nodeFillColor: "250, 166, 1",
+                    nodeGlowing: true,
+                }, isMobile);
 
-            $blur3.polygonizr({
-                restNodeMovements: 0,
-                nodeEase: "linear",
-                numberOfNodes: 80 * points_scale,
-                nodeRelations: 10 * points_scale,
-                nodeDotColor: "250, 166, 1",
-                nodeLineColor: "250, 166, 1",
-                nodeFillColor: "250, 166, 1",
-                nodeGlowing: false,
-            }, true);
+                blur1.polygonizr({
+                    restNodeMovements: 0,
+                    canvasWidth: width,
+                    canvasHeight: height,
+                    nodeEase: "linear",
+                    numberOfNodes: 300 * points_scale,
+                    nodeRelations: 8 * points_scale,
+                    nodeDotColor: "91, 152, 206",
+                    nodeLineColor: "91, 152, 206",
+                    nodeFillColor: "91, 152, 206",
+                    nodeGlowing: false,
+                }, true);
+                
+                blur2.polygonizr({
+                    restNodeMovements: 0,
+                    animationFps: 0,
+                    canvasWidth: width,
+                    canvasHeight: height,
+                    numberOfNodes: 150 * points_scale,
+                    nodeRelations: 10 * points_scale,
+                    nodeDotColor: "158, 0, 93",
+                    nodeLineColor: "158, 0, 93",
+                    nodeFillColor: "158, 0, 93",
+                    nodeGlowing: false,
+                }, true);
+
+                blur3.polygonizr({
+                    restNodeMovements: 0,
+                    animationFps: 0,
+                    canvasWidth: width,
+                    canvasHeight: height,
+                    numberOfNodes: 80 * points_scale,
+                    nodeRelations: 20 * points_scale,
+                    nodeDotColor: "250, 166, 1",
+                    nodeLineColor: "250, 166, 1",
+                    nodeFillColor: "250, 166, 1",
+                    nodeGlowing: false,
+                }, true);
+            }
+
+            create_polygons()
+
+            $( window ).resize(function() {
+                console.log("resize")
+                // create_polygons(true)
+                fg.polygonizr("clear")
+                blur1.polygonizr("clear")
+                blur2.polygonizr("clear")
+                blur3.polygonizr("clear")
+                console.log("stopped")
+                create_polygons(width=$(this).width(), height=$(this).height())
+            });
         </script>
     </body>
 </html>

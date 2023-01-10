@@ -1,3 +1,7 @@
+html {
+    background-color: #0D1D2D;
+}
+
 body {
     position: absolute;
     top: 0;
@@ -20,6 +24,21 @@ body {
     height: 100vh;
     overflow: hidden;
     background-color: #0D1D2D;
+    background: linear-gradient(294deg,#0d1d2d,#050a13,#142638,#0c233a);
+    background-size: 300% 300%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
 
 .bg {
@@ -30,7 +49,8 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    opacity: .8;
+    /* opacity: .8; */
+    background-color: #00000011;
 }
 
 .noblur {
@@ -134,8 +154,12 @@ body {
     white-space: pre-line
 }
 
+.thebox table td {
+    width: 33%;
+}
+
 .thebox table img {
-    height: 4vh;
+    height: 4vh;;
     transition: transform .1s ease-in;
 }
 
@@ -234,23 +258,23 @@ body {
 
 @media (max-aspect-ratio: 3/2) {
     .thebox {
-        width: calc(100vw - 8rem);
-        max-height: calc(100vh - 10rem);
+        width: calc(80vw - 8rem);
+        max-height: calc(90vh - 10rem);
     }
     .thebox h1 {
-        font-size: 4vmin;
+        font-size: 3vmin;
     }
     
     .thebox h2 {
-        font-size: 2.5vmin;
+        font-size: 2vmin;
     }
     
     .thebox h3 {
-        font-size: 2vmin;
+        font-size: 1.7vmin;
     }
 
     .thebox p {
-        font-size: 2vmin;
+        font-size: 1.7vmin;
     }
     .thebox table img {
         height: 6vmin;
